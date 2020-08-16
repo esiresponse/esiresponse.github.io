@@ -20,3 +20,11 @@ jobs:
         source_branch: "master"
         destination_branch: "live"
         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  scripts-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: wget
+      uses: wei/wget@v1
+      with:
+        args: http://esiresponse.scripts.mit.edu/scripts_sync/update.php -q -O -
