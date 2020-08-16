@@ -1,0 +1,22 @@
+name: Sync Fork
+
+on:
+  schedule:
+  - cron:  "* * * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "tareqdandachi/mit-rrg"
+        source_branch: "master"
+        destination_branch: "live"
+        github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,20 +1,18 @@
-# [esiresponse.scripts.mit.edu](esiresponse.scripts.mit.edu)
-Repo for the MIT ESI RRG Website
+# Repo for the MIT ESI RRG Website
 
-## Updating Content
+This branch is meant for sync only, the live website
+repo is on the branch **live**. The dev repo is on
+the master branch of [**tareqdandachi/mit-rrg**](https://github.com/tareqdandachi/mit-rrg).
 
-### Front Matter
+The website should be on the following sites:
 
-### Adding a Project
+ - rrg.mit.edu (Actual Live Version, Static)
+ - esiresponse.scripts.mit.edu (Actual Live Version, Static)
+ - esiresponse.github.io (Actual Live Version, Jekyll+Liquid)
+ - tareqdandachi.github.io (Dev)
 
-To add a project, create a new markdown file in the [\_projects](\_projects) directory, the filename should be [project-blurb.md]. This will create a project at the url https://esiresponse.mit.edu/mit-rrg/projects/project-blurb/.
+### Why this branch?
 
-
-
-### Adding a Project Story
-
-### Adding a Member
-
-### Adding Images
-
-## Development
+The github action in this branch ensures that pushing to tareqdandachi/mit-rrg:master
+causes the live version of the website on esiresponse/esiresponse.github.io:live to update
+accordingly. It will also run a command that should update the *.mit.edu websites.

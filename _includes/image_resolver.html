@@ -1,7 +1,0 @@
-<img src="
-{% if include.src contains '://' %}
-	{{ include.src }}
-{% else %}
-	{{ site.baseurl }}/resources/uploads/{{ include.src }}
-{% endif %}
-" id="{{ include.id }}" class="{{ include.class }}" data-rellax-speed="{{ include.rellax_speed }}"/>
