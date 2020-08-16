@@ -23,6 +23,7 @@ jobs:
 
   scripts-sync:
     runs-on: ubuntu-latest
+    needs: [repo-sync]
     steps:
     - name: wget
       uses: wei/wget@v1
